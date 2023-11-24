@@ -7,6 +7,7 @@ import { SearchForm } from "./components/SearchForm";
 import { TransactionsContext } from "../../contexts/TransactionsContext";
 
 import { TransactionsContainer, TransactionsTable, PriceHighlight } from "./styles";
+import { priceFormatter, dateFormatter } from "../../utils/formatter";
 
 
 export function Transactions() {
@@ -25,10 +26,15 @@ export function Transactions() {
                   {transactions.map(transaction => {
                      return (
                         <tr key={transaction.id}>
-                           <td width="45%">{transaction.description}</td>
-                           <td><PriceHighlight variant={transaction.type}>R$ {transaction.price}</PriceHighlight></td>
+                           <td width="50%">{transaction.description}</td>
+                           <td>
+                              <PriceHighlight variant={transaction.type}>
+                                 {transaction.type === 'outcome' && '- '}
+                                 {priceFormatter.format(transaction.price)}
+                              </PriceHighlight>
+                           </td>
                            <td>{transaction.category}</td>
-                           <td>{transaction.createdAt}</td>
+                           <td>{dateFormatter.format(new Date(transaction.createdAt))}</td>
                         </tr>
                      )
                   })}
