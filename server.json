@@ -15,6 +15,14 @@
          "category": "Alimentação",
          "price": 65,
          "createdAt": "2022-07-29T20:30:44.505Z"
+      },
+      {
+         "id": 3,
+         "description": "MequiDonnalds",
+         "type": "outcome",
+         "category": "Alimentação",
+         "price": 100,
+         "createdAt": "2022-07-30T20:30:44.505Z"
       }
    ]
 }
