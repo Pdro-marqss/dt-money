@@ -39,6 +39,14 @@
       "type": "outcome",
       "createdAt": "2023-11-29T03:12:18.434Z",
       "id": 5
+    },
+    {
+      "description": "Desenvolvimento de Aplicativo",
+      "category": "Trabalho",
+      "price": 5000,
+      "type": "income",
+      "createdAt": "2023-11-30T04:21:23.054Z",
+      "id": 6
     }
   ]
 }
